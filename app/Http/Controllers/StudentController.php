@@ -11,7 +11,8 @@ class StudentController extends Controller
      */
     public function index()
     {
-        //
+        $students = Student::all();
+        return response()->json($students);
     }
 
     /**
@@ -35,7 +36,7 @@ class StudentController extends Controller
      */
     public function show(string $id)
     {
-        //
+        return response()->json(Student::find($id));
     }
 
     /**
